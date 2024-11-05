@@ -1,9 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://ro16l4k4nwm3"]
+[gd_scene load_steps=6 format=3 uid="uid://ro16l4k4nwm3"]
 
 [ext_resource type="Script" path="res://player/player.gd" id="1_32yqu"]
 [ext_resource type="Script" path="res://camera.gd" id="2_dklh7"]
 [ext_resource type="Texture2D" uid="uid://b344as6wbvyxm" path="res://icon.svg" id="3_bbvw7"]
-[ext_resource type="Script" path="res://Icon.cs" id="4_3ticb"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_i3uqy"]
 
@@ -28,6 +27,5 @@ shape = SubResource("CapsuleShape3D_i3uqy")
 mesh = SubResource("CapsuleMesh_pmqky")
 
 [node name="Icon" type="Sprite2D" parent="."]
-position = Vector2(508, 263)
+position = Vector2(184, 507)
 texture = ExtResource("3_bbvw7")
-script = ExtResource("4_3ticb")

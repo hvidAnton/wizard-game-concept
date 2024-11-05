@@ -3,7 +3,12 @@ extends CharacterBody3D
 
 const SPEED = 5.0
 const JUMP_VELOCITY = 4.5
+const CAMLERP = 0.2
 
+
+var show_key
+var press = []
+var showIcon
 
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
@@ -26,4 +31,21 @@ func _physics_process(delta: float) -> void:
 		velocity.z = move_toward(velocity.z, 0, SPEED)
 
 	move_and_slide()
-	$camaraTaget.position = lerp($camaraTaget.position, position, 0.1)
+	$camaraTaget.position = lerp($camaraTaget.position, position, CAMLERP)
+	if Input.is_action_just_pressed("Q press"):
+		$Icon.show()
+		press.append($Icon)
+		printArray(press)
+		print(press)
+
+	
+
+func printArray(array):
+	for i in array:
+		print(i)
+		showIcon = $Icon
+		showIcon = array[i]
+		print(showIcon)
+		showIcon.position = Vector2(i*10, 200)
+		#print("haaaa")
+		#showIcon.show()
